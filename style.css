@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    background-image: url("Image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    height: 100vh;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 480px;
+    animation: fadeIn 1.2s ease-in-out;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.ball {
+    width: 420px;
+    height: 420px;
+
+    margin: 0 auto 30px;
+
+    background: radial-gradient(circle at 30% 30%, #ffffff, #c26bff 45%, #5e00a6 70%, #2b003a 90%);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        0 0 55px #d19bff,
+        0 0 100px #a100ff,
+        inset 0 0 45px #ffd9ff;
+
+    animation: pulse 2.5s infinite ease-in-out;
+}
+
+
+.ballText {
+    font-size: 32px;
+    font-weight: 700;
+    padding: 20px;
+
+    color: #3d007a;
+    text-shadow:
+        0 0 8px #ffffff,
+        0 0 20px #ffdbff;
+}
+
+
+input {
+    width: 100%;
+    max-width: 350px;
+
+    padding: 14px;
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+    border: none;
+    outline: none;
+
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+
+button {
+    width: 100%;
+    max-width: 350px;
+
+    padding: 15px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+
+    background: #b552ff;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 20px #9c4dff;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #d38bff;
+    box-shadow: 0 0 35px #c77bff;
+    transform: scale(1.03);
+}
+
+
+@media (max-width: 480px) {
+    .ball {
+        width: 300px;
+        height: 300px;
+    }
+    .ballText {
+        font-size: 24px;
+    }
+}
+
+.shake {
+    transform: translateX(-5px);
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 30px #b06cff, inset 0 0 20px #ffd6ff; }
+    50% { box-shadow: 0 0 70px #e2b0ff, inset 0 0 40px #ffe6ff; }
+    100% { box-shadow: 0 0 30px #b06cff, inset 0 0 20px #ffd6ff; }
+}
+
